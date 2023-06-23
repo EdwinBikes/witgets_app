@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widgets_app/config/router/app_router.dart';
 import 'package:widgets_app/config/theme/app_theme.dart';
 import 'package:widgets_app/menu/menu_items.dart';
 
@@ -9,16 +10,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: appRouter,
       title: 'Material App',
       debugShowCheckedModeBanner: false,
       theme: AppTheme(selectedColor: 2).getTheme(),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const _HomeView(),
-      ),
     );
   }
 }
@@ -57,7 +53,7 @@ class _CustomListTile extends StatelessWidget {
       trailing: Icon(Icons.arrow_back_ios_rounded, color: colors.primary),
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
-      onTap: (){},
+      onTap: () {},
     );
   }
 }
