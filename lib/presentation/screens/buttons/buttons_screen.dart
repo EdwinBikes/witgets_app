@@ -3,18 +3,22 @@ import 'package:go_router/go_router.dart';
 
 class ButtonsScreen extends StatelessWidget {
   static const String name = 'buttons_screen';
+
   const ButtonsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('prueba de pantalla')),
+      appBar: AppBar(
+        title: const Text('Buttons Screen'),
+      ),
       body: const _ButtonsView(),
       floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            context.pop();
-          },
-          child: const Icon(Icons.arrow_back_ios_new_rounded)),
+        child: const Icon(Icons.arrow_back_ios_new_rounded),
+        onPressed: () {
+          context.pop();
+        },
+      ),
     );
   }
 }
@@ -25,51 +29,50 @@ class _ButtonsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
+
     return SizedBox(
       width: double.infinity,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
         child: Wrap(
           spacing: 10,
           alignment: WrapAlignment.center,
           children: [
-            ElevatedButton(
-                onPressed: () {}, child: const Text('Elevated Botton')),
+            ElevatedButton(onPressed: () {}, child: const Text('Elevated')),
             const ElevatedButton(
-                onPressed: null, child: Text('Elevated Botton')),
+                onPressed: null, child: Text('Elevated Disabled')),
             ElevatedButton.icon(
-              onPressed: () {},
-              icon: const Icon(Icons.abc_sharp),
-              label: const Text('Elevated Icon'),
-            ),
+                onPressed: () {},
+                icon: const Icon(Icons.access_alarm_rounded),
+                label: const Text('Elevated Icon')),
             FilledButton(onPressed: () {}, child: const Text('Filled')),
             FilledButton.icon(
-                onPressed: () {},
-                icon: const Icon(Icons.access_alarm),
-                label: const Text('Filled icon')),
-            const OutlinedButton(onPressed: null, child: Text('Outline')),
-            OutlinedButton.icon(
               onPressed: () {},
-              icon: const Icon(Icons.accessible_forward_sharp),
-              label: const Text('Outline Icon'),
+              icon: const Icon(Icons.accessibility_new),
+              label: const Text('Filled Icon'),
             ),
-            const TextButton(onPressed: null, child: Text('Text button')),
+            OutlinedButton(onPressed: () {}, child: const Text('Outline')),
+            OutlinedButton.icon(
+                onPressed: () {},
+                label: const Text('Outline Icon'),
+                icon: const Icon(Icons.terminal)),
+            TextButton(onPressed: () {}, child: const Text('Text')),
             TextButton.icon(
               onPressed: () {},
-              icon: const Icon(Icons.safety_check),
-              label: const Text('Text button icon'),
+              icon: const Icon(Icons.account_box_outlined),
+              label: const Text('Text Icon'),
             ),
-           const CustomButton(),
+            const CustomButton(),
+            IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.app_registration_rounded)),
             IconButton(
               onPressed: () {},
-              icon: const Icon(Icons.add_task_outlined),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.add_task_outlined),
+              icon: const Icon(Icons.app_registration_rounded),
               style: ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(colors.primary),
-                  iconColor: const MaterialStatePropertyAll(Colors.white)),
+                backgroundColor: MaterialStatePropertyAll(colors.primary),
+                iconColor: const MaterialStatePropertyAll(Colors.white),
+              ),
             ),
           ],
         ),
@@ -84,20 +87,18 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
+
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
       child: Material(
-          color: colors.primary,
-          child: InkWell(
-            onTap: () {},
-            child: const Padding(
+        color: colors.primary,
+        child: InkWell(
+          onTap: () {},
+          child: const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              child: Text(
-                'sdasd',
-                style: TextStyle(color: Colors.purple),
-              ),
-            ),
-          )),
+              child: Text('Hola Mundo', style: TextStyle(color: Colors.white))),
+        ),
+      ),
     );
   }
 }
