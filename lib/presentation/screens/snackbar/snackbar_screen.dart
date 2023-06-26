@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SnackbarScreen extends StatelessWidget {
   static const name = 'snackbar_screen';
@@ -27,8 +28,8 @@ class SnackbarScreen extends StatelessWidget {
               content: const Text(
                   'Estoy haciendo pruebas y aca varia el tamaño del widget padre dependiendo el widget hijo. si el texto es muy grande el se ajusta automaticamente'),
               actions: [
-                TextButton(onPressed: () {}, child: const Text('Cancelar')),
-                FilledButton(onPressed: () {}, child: const Text('Aceptar')),
+                TextButton(onPressed: () => context.pop(), child: const Text('Cancelar')),
+                FilledButton(onPressed: () => context.pop(), child: const Text('Aceptar')),
               ],
             ));
   }
