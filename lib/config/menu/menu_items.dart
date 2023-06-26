@@ -34,9 +34,14 @@ const appMenuItems = <MenuItem>[
       subTitle: 'Indicadodes en pantallas',
       link: '/snackbars',
       icon: Icons.alarm_on_sharp),
-      MenuItem(
+  MenuItem(
       title: 'Animated Container',
       subTitle: 'Widgets Animado',
       link: '/animated',
       icon: Icons.check_box_outline_blank_outlined),
+  MenuItem(
+      title: 'Controls UI',
+      subTitle: 'Controles de UI',
+      link: '/controlsUI',
+      icon: Icons.camera_alt_sharp),
 ];

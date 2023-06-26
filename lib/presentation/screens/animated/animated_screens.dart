@@ -21,11 +21,10 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
     final random = Random();
     width = random.nextInt(300) + 40;
     height = random.nextInt(300) + 40;
-        borderRadius = random.nextInt(100) + 20;
-color = Color.fromRGBO(random.nextInt(255),random.nextInt(255),random.nextInt(255),9);
-    setState(() {
-      
-    });
+    borderRadius = random.nextInt(100) + 20;
+    color = Color.fromRGBO(
+        random.nextInt(255), random.nextInt(255), random.nextInt(255), 9);
+    setState(() {});
   }
 
   @override
@@ -38,13 +37,19 @@ color = Color.fromRGBO(random.nextInt(255),random.nextInt(255),random.nextInt(25
           child: AnimatedContainer(
         duration: const Duration(milliseconds: 500),
         curve: Curves.elasticInOut,
-        width: width<= 0?0:width,// funcion de que si el width es menor o igual a 0 entonces de 0 y si no entonces que continue el mismo widht
-        height: height<= 0?0:height,
+        width: width <= 0
+            ? 0
+            : width, // funcion de que si el width es menor o igual a 0 entonces de 0 y si no entonces que continue el mismo widht
+        height: height <= 0 ? 0 : height,
         decoration: BoxDecoration(
-            color: color, borderRadius: BorderRadius.circular(borderRadius < 0 ? 0 : borderRadius)),
+            color: color,
+            borderRadius:
+                BorderRadius.circular(borderRadius < 0 ? 0 : borderRadius)),
       )),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {changeShape();},
+        onPressed: () {
+          changeShape();
+        },
         child: const Icon(Icons.play_circle_filled_rounded),
       ),
     );
