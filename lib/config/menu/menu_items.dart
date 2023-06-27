@@ -44,4 +44,9 @@ const appMenuItems = <MenuItem>[
       subTitle: 'Controles de UI',
       link: '/controlsUI',
       icon: Icons.camera_alt_sharp),
+  MenuItem(
+      title: 'Turorial de la APP',
+      subTitle: 'Turotial App',
+      link: '/tutotial',
+      icon: Icons.car_rental),
 ];
