@@ -15,6 +15,11 @@ class MenuItem {
 
 const appMenuItems = <MenuItem>[
   MenuItem(
+      title: 'Counter Screen',
+      subTitle: 'Contador',
+      link: '/counter',
+      icon: Icons.star_border),
+  MenuItem(
       title: 'Botones',
       subTitle: 'Varios botones en Flutter',
       link: '/buttons',
@@ -47,6 +52,16 @@ const appMenuItems = <MenuItem>[
   MenuItem(
       title: 'Turorial de la APP',
       subTitle: 'Turotial App',
-      link: '/tutotial',
+      link: '/tutorial',
       icon: Icons.car_rental),
+  MenuItem(
+      title: 'Scroll infinito',
+      subTitle: 'Ver imagenes sin fin',
+      link: '/scroll',
+      icon: Icons.vibration_sharp),
+  MenuItem(
+      title: 'Apariencia de la app',
+      subTitle: 'Cambia toda la visualizacion de la app',
+      link: '/theme',
+      icon: Icons.color_lens_sharp),
 ];
