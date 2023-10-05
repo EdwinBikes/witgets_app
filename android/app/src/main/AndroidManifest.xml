@@ -2,7 +2,9 @@
 
     <uses-permission
      android:name="android.permissionINTERNET" />
-     
+    <uses-permission 
+    android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:label="widgets_app"
         android:name="${applicationName}"

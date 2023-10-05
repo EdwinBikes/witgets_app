@@ -1,6 +1,5 @@
-import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
-import 'package:widgets_app/presentation/widgets/appbar/custom_appbar.dart';
+import 'package:flutter/services.dart'; // Importa el paquete Services
 
 class ConversionScreen extends StatefulWidget {
   static const name = 'leter_num_screen';
@@ -20,7 +19,9 @@ class ConversionScreenState extends State<ConversionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: const CustomAppbar(titleAppbar: ("Letras ➡️ números")),
+      appBar: AppBar(
+        title: const Text('Letras ➡️ números'),
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -63,7 +64,8 @@ class ConversionScreenState extends State<ConversionScreen> {
                       setState(() {
                         resultadoLet = convertido;
                       });
-                      FlutterClipboard.copy(convertido);
+                      Clipboard.setData(
+                          ClipboardData(text: convertido)); // Usar Clipboard
                     },
                     child: const Text("Copiar texto"),
                   ),
@@ -73,7 +75,8 @@ class ConversionScreenState extends State<ConversionScreen> {
               Text("Resultado: $resultadoLet"),
 
               // Cambiar números a letras
-              const SizedBox(height: 30),
+
+              const SizedBox(height: 50),
               TextField(
                 controller: inputControllerNum,
                 decoration: const InputDecoration(
@@ -110,7 +113,8 @@ class ConversionScreenState extends State<ConversionScreen> {
                       setState(() {
                         resultadoNum = convertido;
                       });
-                      FlutterClipboard.copy(convertido);
+                      Clipboard.setData(
+                          ClipboardData(text: convertido)); // Usar Clipboard
                     },
                     child: const Text("Copiar texto"),
                   ),

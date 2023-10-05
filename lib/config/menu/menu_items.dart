@@ -15,6 +15,27 @@ class MenuItem {
 
 const appMenuItems = <MenuItem>[
   MenuItem(
+      title: 'letras a numeros',
+      subTitle: 'Puedes cambiar palabras según su posición en el abecedario',
+      link: '/leter_num_screen',
+      icon: Icons.numbers_rounded),
+  MenuItem(
+    title: 'Peliculas gratis',
+    subTitle: 'Pagina Web de peliculas Gratis',
+    link: '/page_view_screen',
+    icon: Icons.web,
+  ),
+  MenuItem(
+      title: 'videos',
+      subTitle: 'Reproductor de videos',
+      link: '/video_view_screen',
+      icon: Icons.local_play_outlined),
+  MenuItem(
+      title: 'Juego Triqui',
+      subTitle: 'Jueguito para pasar el rato',
+      link: '/triqui_screen',
+      icon: Icons.gamepad_outlined),
+  MenuItem(
       title: 'Counter Screen',
       subTitle: 'Contador',
       link: '/counter',
@@ -60,13 +81,18 @@ const appMenuItems = <MenuItem>[
       link: '/scroll',
       icon: Icons.vibration_sharp),
   MenuItem(
-      title: 'letras a numeros',
-      subTitle: 'Puedes cambiar palabras según su posición en el abecedario',
-      link: '/leter_num_screen',
+      title: 'Apariencia de la APP',
+      subTitle: 'Cambiar colores de la App',
+      link: '/theme',
       icon: Icons.color_lens_sharp),
   MenuItem(
-      title: 'web',
-      subTitle: 'P',
-      link: '/page_view_screen',
-      icon: Icons.color_lens_sharp),
+      title: 'Pagina Web',
+      subTitle: 'Creador de esta aplicación',
+      link: '/page_porfolio_screen',
+      icon: Icons.web_stories_outlined),
+  MenuItem(
+      title: '',
+      subTitle: 'APP creada por EdwinBikes',
+      link: '/',
+      icon: Icons.person),
 ];

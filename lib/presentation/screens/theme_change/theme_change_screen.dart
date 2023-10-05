@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:widgets_app/presentation/providers/theme.provider.dart';
 
 class ThemeChangeScreen extends ConsumerWidget {
-  static const name = 'theme_charger_screen';
+  static const name = 'theme';
   const ThemeChangeScreen({super.key});
 
   @override

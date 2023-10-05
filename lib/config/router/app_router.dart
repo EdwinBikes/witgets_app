@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
-import 'package:widgets_app/presentation/screens/leters_numbers/conversion_let_num.dart';
-import 'package:widgets_app/presentation/screens/page_web/page_web.dart';
+import 'package:widgets_app/presentation/screens/page_web_portfolio/page_web_porfolio.dart';
 import 'package:widgets_app/presentation/screens/screens.dart';
+import 'package:widgets_app/presentation/screens/triqui/triqui.dart';
 
 // GoRouter configuration
 final appRouter = GoRouter(
@@ -71,6 +71,21 @@ final appRouter = GoRouter(
       path: '/page_view_screen',
       name: PageviewScreen.name,
       builder: (context, state) => const PageviewScreen(),
+    ),
+    GoRoute(
+      path: '/video_view_screen',
+      name: VideoPlayerScreen.name,
+      builder: (context, state) => const VideoPlayerScreen(),
+    ),
+    GoRoute(
+      path: '/page_porfolio_screen',
+      name: PagePortfolioScreen.name,
+      builder: (context, state) => const PagePortfolioScreen(),
+    ),
+    GoRoute(
+      path: '/triqui_screen',
+      name: TriquiScreen.name,
+      builder: (context, state) => const TriquiScreen(),
     ),
   ],
 );
