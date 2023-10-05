@@ -47,7 +47,7 @@ class _SideMenuState extends State<SideMenu> {
             padding: EdgeInsets.fromLTRB(28, 10, 16, 10),
             child: Text("Mas opciones"),
           ),
-          ...appMenuItems.sublist(0, 3).map(
+          ...appMenuItems.sublist(3).map(
                 (item) => NavigationDrawerDestination(
                   icon: Icon(item.icon),
                   label: Text(item.title),

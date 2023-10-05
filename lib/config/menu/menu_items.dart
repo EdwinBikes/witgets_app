@@ -60,8 +60,13 @@ const appMenuItems = <MenuItem>[
       link: '/scroll',
       icon: Icons.vibration_sharp),
   MenuItem(
-      title: 'Apariencia de la app',
-      subTitle: 'Cambia toda la visualizacion de la app',
-      link: '/theme',
+      title: 'letras a numeros',
+      subTitle: 'Puedes cambiar palabras según su posición en el abecedario',
+      link: '/leter_num_screen',
+      icon: Icons.color_lens_sharp),
+  MenuItem(
+      title: 'web',
+      subTitle: 'P',
+      link: '/page_view_screen',
       icon: Icons.color_lens_sharp),
 ];

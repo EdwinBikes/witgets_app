@@ -1,4 +1,6 @@
 import 'package:go_router/go_router.dart';
+import 'package:widgets_app/presentation/screens/leters_numbers/conversion_let_num.dart';
+import 'package:widgets_app/presentation/screens/page_web/page_web.dart';
 import 'package:widgets_app/presentation/screens/screens.dart';
 
 // GoRouter configuration
@@ -59,6 +61,16 @@ final appRouter = GoRouter(
       path: '/theme',
       name: ThemeChangeScreen.name,
       builder: (context, state) => const ThemeChangeScreen(),
+    ),
+    GoRoute(
+      path: '/leter_num_screen',
+      name: ConversionScreen.name,
+      builder: (context, state) => const ConversionScreen(),
+    ),
+    GoRoute(
+      path: '/page_view_screen',
+      name: PageviewScreen.name,
+      builder: (context, state) => const PageviewScreen(),
     ),
   ],
 );
